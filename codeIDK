@@ -1,0 +1,19 @@
+import time
+from selenium import webdriver
+# For chrome
+browser = webdriver.Chrome()
+
+# BestBuy or shoes idk
+browser.get("https://www.nike.com/t/air-jordan-1-hi-flyease-shoe-VjGcGX/CQ3835-003")
+
+
+
+buyButton = False
+
+while not buyButton:
+
+    try: 
+        #If this works then button is not pythopen
+        addToCartBtn = addButton = browser.find_element_by_class_name("btn-disabled")
+        
+        #button isnt open restart script
